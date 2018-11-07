@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <record name="stanley" javaclass="com.wm.util.Values">
+    <value name="vcsName">ssprocket</value>
+    <value name="vcsPassword"></value>
+  </record>
+  <record name="fred" javaclass="com.wm.util.Values">
+    <value name="vcsName">fflintstone</value>
+    <value name="vcsPassword">w1lma</value>
+  </record>
+  <record name="barney" javaclass="com.wm.util.Values">
+    <value name="vcsName">brubble</value>
+    <value name="vcsPassword">b3tty</value>
+  </record>
+</Values>

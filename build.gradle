@@ -1,0 +1,25 @@
+label = 'WmVCS'
+description = "$project.label package"
+
+configurations.staticRuntime.artifacts.removeAll { it.archiveTask.is jarStatic }
+configurations.archives.artifacts.removeAll { it.archiveTask.is jarStatic }
+
+sourceSets.main.java.srcDirs = ['code/source'] //TODO :: Remove this after moving to convention based layout
+
+dependencies {
+    providedCompile project(':packages:is-pkg-wmroot')
+}
+
+tasks.syncPkg.enabled = false
+
+// Installer tasks
+distModuleZip {
+    afterEvaluate {
+        into 'IntegrationServer/packages/WmVCS'
+    }
+}
+distModule {
+    afterEvaluate {
+        moduleName = "BM_IntegrationServerLiveWmVCS-ALL-Any"
+    }
+}

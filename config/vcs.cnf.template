@@ -1,0 +1,35 @@
+# webMethods, Inc. Version Control Integration Feature
+
+# This is an example configuration file for the WmVCS package.
+# A configuration file named "vcs.cnf" must be present in the 
+# \config directory of the WmVCS package.
+
+# For more information, see the webMethods Version Control System
+# Integration Developer's Guide.
+
+# Specify the VCS type: 
+# For Visual SourceSafe specify "vss"
+
+watt.vcs.type=vss
+
+# Time-out value, in milliseconds. If no value is entered, the default
+# of 60000 (1 minute) applies; enter a positive integer to override the
+# default; enter -1 to disable the time-out (not recommended):
+
+watt.vcs.command.timeout=
+
+# IMPORTANT! Do not change or delete any of the entries below this line.
+
+watt.vcs.metacomment.delete=\
+%value usercomment%%nl%\
+dev_user: %value dev_user%%nl%\
+is_host : %value is_host%%nl%\
+dev_host: %value dev_host%%nl%\
+is_time : %value is_time%
+
+watt.vcs.metacomment.checkin=\
+%value usercomment%%nl%\
+dev_user: %value dev_user%%nl%\
+is_host : %value is_host%%nl%\
+dev_host: %value dev_host%%nl%\
+is_time : %value is_time%
